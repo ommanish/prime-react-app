@@ -84,9 +84,7 @@ const UserList = () => {
   };
 
   const displayImage = (rowData) => {
-    return (
-      <img src={rowData.picture.thumbnail} alt="User Profile" height="100px" />
-    );
+    return <img src={rowData.picture.thumbnail} alt="User Profile" />;
   };
 
   const displayAge = (rowData) => {
