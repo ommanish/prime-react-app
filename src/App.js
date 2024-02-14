@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Menubar } from "primereact/menubar";
+import Counter from "./components/Counter";
+import Greet from "./components/Greet";
+import UserList from "./components/UserList";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menubar
+        className="bg-blue-600 p-3 text-3xl text-white"
+        start={"Manish Chawla"}
+      />
+      <div className="grid">
+        <Counter />
+        <Greet />
+      </div>{" "}
+      <UserList />
     </div>
   );
-}
+};
 
 export default App;
